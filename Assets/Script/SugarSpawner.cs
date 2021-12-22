@@ -7,17 +7,27 @@ public class SugarSpawner : MonoBehaviour
     [SerializeField] private Transform parent;
     [SerializeField] private GameObject sugarPrefab;
     [SerializeField] private int sugarCount;
-    [SerializeField] private float waitDuration;
+    private  float sleepDuration = 2f;
+    [SerializeField] private float waitDuration = 0.1f;
     private float timer = 0f;
+    private float startTime;
 
+
+    private void Start()
+    {
+        startTime = Time.time;
+    }
 
     private void FixedUpdate()
     {
-        timer +=  Time.deltaTime;
-        if (timer >= waitDuration)
+        if ((Time.time - startTime) >= sleepDuration)
         {
-            Spawn();
-            timer = 0f;
+            timer +=  Time.deltaTime;
+            if (timer >= waitDuration)
+            {
+                Spawn();
+                timer = 0f;
+            }
         }
     }
 

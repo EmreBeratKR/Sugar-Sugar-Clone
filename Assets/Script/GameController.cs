@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] private SceneController sceneController;
     [SerializeField] private Collector[] collectors;
+    [SerializeField] private DoubleCollector[] doubleCollectors;
 
 
     public void CheckWin()
@@ -21,13 +22,19 @@ public class GameController : MonoBehaviour
         }
         if (isWin)
         {
-            StartCoroutine(NextLevel());
+            foreach (DoubleCollector col in doubleCollectors)
+            {
+                if (col.value != 0)
+                {
+                    isWin = false;
+                    break;
+                }
+            }
         }
-    }
-
-    IEnumerator NextLevel()
-    {
-        yield return new WaitForSeconds(3f);
-        sceneController.NextLevel();
+        if (isWin)
+        {
+            AudioController.Play_LevelCompletion();
+            sceneController.NextLevel();
+        }
     }
 }

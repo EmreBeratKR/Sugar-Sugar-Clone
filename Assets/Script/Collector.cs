@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Collector : MonoBehaviour
 {
     private GameController gameController;
@@ -13,6 +14,11 @@ public class Collector : MonoBehaviour
     {
         gameController = FindObjectOfType<GameController>();
         textMesh.text = value.ToString();
+    }
+
+    private void OnEnable()
+    {
+        UpdateText();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

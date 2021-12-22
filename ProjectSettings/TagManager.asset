@@ -38,9 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Line
-    uniqueID: 1491597275
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Sugars
+    uniqueID: 1491597275
+    locked: 0
+  - name: Cups
+    uniqueID: 3935276487
     locked: 0
