@@ -175,6 +175,7 @@ MonoBehaviour:
   parent: {fileID: 1173230839}
   sugarPrefab: {fileID: 3277279292645878339, guid: 94720a41c44024abaa5d54a37829a0d1, type: 3}
   sugarCount: 1000
+  waitDuration: 0.1
 --- !u!1 &67256404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,6 +1424,7 @@ MonoBehaviour:
   - {fileID: 1007277607}
   - {fileID: 607922544}
   - {fileID: 492381306}
+  doubleCollectors: []
 --- !u!1001 &930169193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1702,15 +1704,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1964168493116982595, guid: 3d2e246a85c964e0db62b2ba40fcab3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -103.26
+      value: -103.2
       objectReference: {fileID: 0}
     - target: {fileID: 2990329972467483105, guid: 3d2e246a85c964e0db62b2ba40fcab3c, type: 3}
       propertyPath: m_Size.x
-      value: 17.86786
+      value: 17.899712
       objectReference: {fileID: 0}
     - target: {fileID: 2990329972467483105, guid: 3d2e246a85c964e0db62b2ba40fcab3c, type: 3}
       propertyPath: m_Offset.x
-      value: 8.93393
+      value: 8.949856
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d2e246a85c964e0db62b2ba40fcab3c, type: 3}

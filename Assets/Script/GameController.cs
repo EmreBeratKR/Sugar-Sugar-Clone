@@ -12,15 +12,18 @@ public class GameController : MonoBehaviour
     public void CheckWin()
     {
         bool isWin = true;
-        foreach (Collector col in collectors)
+        if (collectors != null)
         {
-            if (col.value != 0)
+            foreach (Collector col in collectors)
             {
-                isWin = false;
-                break;
+                if (col.value != 0)
+                {
+                    isWin = false;
+                    break;
+                }
             }
         }
-        if (isWin)
+        if (isWin && doubleCollectors != null)
         {
             foreach (DoubleCollector col in doubleCollectors)
             {
