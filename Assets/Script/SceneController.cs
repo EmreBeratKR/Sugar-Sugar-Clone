@@ -88,4 +88,9 @@ public class SceneController : MonoBehaviour
     {
         AudioController.ToggleMusic();
     }
+
+    public void OpenGithub()
+    {
+        Application.OpenURL("https://github.com/EmreBeratKR/Sugar-Sugar-Clone");
+    }
 }
